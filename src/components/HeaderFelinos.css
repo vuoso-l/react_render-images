@@ -1,0 +1,13 @@
+h1 {
+    padding: .5em 1em;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    color: grey;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: green;
+    border-radius: 10px;
+    border: none;
+}

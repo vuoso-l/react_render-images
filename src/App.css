@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light {
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header,
+main,
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 0px;
+}
+
+h1 {
+  padding: 5px 10px;
+  background-color: white;
+  color: grey;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
   color: white;
+  background-color: grey;
+  border-radius: 10px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 80%;
+  margin: 2em 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.item {
+  max-width: 100%;
+  width: 30em;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin: 0.5em;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 2px;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+}
+
+/* Dark style*/
+.dark {
+  background-color: rgb(39, 39, 39);
+}
+
+.dark h1 {
+  background-color: rgb(19, 19, 19);
+  color: rgb(170, 170, 170);
+  border-color: black;
+  border-radius: 20px;
+}
+
+.dark button {
+  color: black;
+}
+
+.dark .item {
+  background-color: rgb(19, 19, 19);
+  border-color: black;
+}
+
+.dark p {
+  color: rgb(230, 230, 230);
+}
+
+.dark h2 {
+  color: rgb(230, 230, 230);
+}
+
+.dark button {
+  background-color: white;
+}
+
+@media (min-width: 375px) {
+  h1 {
+    font-size: 34px;
   }
-  to {
-    transform: rotate(360deg);
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 45px;
+    padding-top: 10px;
+  }
+  button {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 10px;
+  }
+  h1 {
+    font-size: 50px;
+    padding-bottom: 5px;
+  }
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .item {
+    width: 45%;
+  }
+  .item img {
+    height: 250px;
   }
 }
